@@ -1,4 +1,408 @@
 body {
+  font-family: Work Sans, Verdana, Lucida Sans, Helvetica Neue, Arial, Roboto,
+    sans-serif;
+}
+
+/*site name  margin*/
+@media (min-width: 1024px) {
+  #fullLogo {
+    margin-left: 2.8rem;
+  }
+
+  .cart-button {
+    margin-right: 2.8rem;
+  }
+}
+@media (min-width: 1440px) {
+  #fullLogo {
+    margin-left: 8rem;
+  }
+
+  .cart-button {
+    margin-right: 8rem;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.logo {
+  width: 45px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: spin 4s linear infinite;
+}
+h1 {
+  margin-left: 5px;
+}
+.logoCenter {
+  height: auto;
+  width: 100px;
+}
+
+.luckiest-guy-regular {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.no-border {
+  border: none;
+}
+
+.no-border:hover,
+.no-border:active,
+.no-border:focus {
+  background-color: transparent !important;
+  color: #ffffff;
+}
+
+/* search bar */
+.search-input {
+  padding-right: 35px;
+}
+.search-results {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.search-results ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-results li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-results li:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ff8800;
+  cursor: pointer;
+}
+
+.orange {
+  color: #ff8800;
+}
+
+.delete-btn {
+  position: absolute;
+  right: 10px; /* Align the delete button to the right*/
+  bottom: 38%;
+  transform: translateY(280%);
+  display: none;
+}
+.list-group-item:hover .delete-btn {
+  display: inline-block;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center items vertically */
+  margin-top: 6rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-top,
+.small-cart-img {
+  width: 100%;
+  height: 20vh;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.card-img-top:hover {
+  transform: scale(1.05);
+}
+.carousel-item img {
+  height: 50vh;
+  width: 80%;
+  object-fit: cover;
+}
+
+#carouselExampleIndicators {
+  height: 50vh;
+  margin-top: 4rem;
+}
+/* Ensures the carousel images fully cover the container height */
+#carouselExampleIndicators .carousel-inner {
+  height: 100%;
+}
+#carouselExampleIndicators .carousel-item img {
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* sorting  items */
+.sort-controls {
+  margin-top: 2rem;
+}
+
+.sort-controls select {
+  font-size: 1rem;
+  padding: 0.375rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.sort-controls label {
+  font-size: 1.1rem;
+  color: #333;
+}
+/* form information */
+.form-select {
+  padding: 0.5rem 1.25rem;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+.form-select:hover {
+  border-color: #007bff;
+}
+.form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.list-group-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.pagination .page-item .page-link {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
   font-family: Arial, sans-serif;
 }
 
@@ -68,7 +472,7 @@ body {
   background-color: #f0f0f0;
 }
 
-/* Checkout Page Styles */
+/* Checkout P
 .checkout-page {
   background-color: #f9f9f9;
   padding: 20px;
@@ -153,7 +557,7 @@ body {
   background-color: #218838;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments *
 @media (max-width: 768px) {
   .checkout-page {
     padding: 15px;
@@ -171,4 +575,4 @@ body {
   .checkout-page form button {
     font-size: 14px;
   }
-}
+} */
