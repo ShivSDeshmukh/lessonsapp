@@ -148,7 +148,7 @@
               </button>
 
               <img
-                :src="`http://lessonsapp-env.eba-icve4xrr.eu-west-2.elasticbeanstalk.com/${lesson.image}`"
+                :src="`https://vueappliaction-env.eba-qkd3evgp.eu-west-2.elasticbeanstalk.com/${lesson.image}`"
                 style="width: 20rem"
               />
               {{ lesson.subject }}
@@ -333,7 +333,7 @@
         class="sort-controls text-center mb-4 d-flex flex-column justify-content-center align-items-center"
       >
         <img
-          src="/Vue.js/asset/logo.jpg"
+          src="/Vue/asset/logo.jpg"
           alt="ParentPay Logo"
           class="logo align-items-center fs-3 logoCenter"
         />
@@ -378,7 +378,7 @@
           :key="lesson.id"
         >
           <img
-            :src="`http://lessonsapp-env.eba-icve4xrr.eu-west-2.elasticbeanstalk.com${lesson.image}`"
+            :src="`https://lessonsapp-env.eba-icve4xrr.eu-west-2.elasticbeanstalk.com/${lesson.image}`"
             class="card-img-top"
             alt="lesson image"
             @click="viewImage(lesson.image)"
@@ -483,7 +483,7 @@
           // Fetching all the lessons from the database
           //fetch("http://localhost:8000/lessons")
           fetch(
-            "https://lessonsapp-env.eba-icve4xrr.eu-west-2.elasticbeanstalk.com"
+            "https://lessonsapp-env.eba-icve4xrr.eu-west-2.elasticbeanstalk.com/lessons"
           )
             .then((response) => {
               if (!response.ok) {
@@ -518,7 +518,7 @@
             this.cart = this.cart.filter((itemId) => itemId !== lessonId);
           },
           viewImage(image) {
-            this.selectedImage = `https://lessonsapp-env.eba-icve4xrr.eu-west-2.elasticbeanstalk.com/${image}`;
+            this.selectedImage = `https://lessonsapp-env.eba-icve4xrr.eu-west-2.elasticbeanstalk.com//${image}`;
             const modal = new bootstrap.Modal(
               document.getElementById("imageModal")
             );
@@ -542,7 +542,7 @@
 
             try {
               const response = await fetch(
-                `http://lessonsapp-env.eba-icve4xrr.eu-west-2.elasticbeanstalk.com/search?q=${encodeURIComponent(
+                `https://lessonsapp-env.eba-icve4xrr.eu-west-2.elasticbeanstalk.com/search?q=${encodeURIComponent(
                   query
                 )}`
               );
