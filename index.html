@@ -378,7 +378,7 @@
           :key="lesson.id"
         >
           <img
-            :src="` http://localhost:8080/${lesson.image}`"
+            :src="`  http://myapp-env.eba-qzx7ttw3.eu-west-2.elasticbeanstalk.com${lesson.image}`"
             class="card-img-top"
             alt="lesson image"
             @click="viewImage(lesson.image)"
@@ -483,7 +483,7 @@
           // Fetching all the lessons from the database
           //fetch("http://localhost:8000/lessons")
           fetch(
-            " http://myapp-env.eba-qzx7ttw3.eu-west-2.elasticbeanstalk.com/lessons"
+            "http://myapp-env.eba-qzx7ttw3.eu-west-2.elasticbeanstalk.com/lessons"
           )
             .then((response) => {
               if (!response.ok) {
@@ -583,7 +583,7 @@
               };
 
               const response = await fetch(
-                " http://localhost:8080/order",
+                " http://myapp-env.eba-qzx7ttw3.eu-west-2.elasticbeanstalk.com/order",
                 {
                   method: "POST",
                   headers: {
