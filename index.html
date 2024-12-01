@@ -148,7 +148,7 @@
               </button>
 
               <img
-                :src="`https://lessonsapp-env.eba-icve4xrr.eu-west-2.elasticbeanstalk.com/${lesson.image}`"
+                :src="` http://localhost:8080/${lesson.image}`"
                 style="width: 20rem"
               />
               {{ lesson.subject }}
@@ -378,7 +378,7 @@
           :key="lesson.id"
         >
           <img
-            :src="`https://lessonsapp-env.eba-icve4xrr.eu-west-2.elasticbeanstalk.com/${lesson.image}`"
+            :src="` http://localhost:8080/${lesson.image}`"
             class="card-img-top"
             alt="lesson image"
             @click="viewImage(lesson.image)"
@@ -483,7 +483,7 @@
           // Fetching all the lessons from the database
           //fetch("http://localhost:8000/lessons")
           fetch(
-            "https://lessonsapp-env.eba-icve4xrr.eu-west-2.elasticbeanstalk.com/lessons"
+            " http://localhost:8080/lessons"
           )
             .then((response) => {
               if (!response.ok) {
@@ -518,7 +518,7 @@
             this.cart = this.cart.filter((itemId) => itemId !== lessonId);
           },
           viewImage(image) {
-            this.selectedImage = `https://lessonsapp-env.eba-icve4xrr.eu-west-2.elasticbeanstalk.com//${image}`;
+            this.selectedImage = ` http://localhost:8080/${image}`;
             const modal = new bootstrap.Modal(
               document.getElementById("imageModal")
             );
@@ -542,7 +542,7 @@
 
             try {
               const response = await fetch(
-                `https://lessonsapp-env.eba-icve4xrr.eu-west-2.elasticbeanstalk.com/search?q=${encodeURIComponent(
+                ` http://localhost:8080/search?q=${encodeURIComponent(
                   query
                 )}`
               );
@@ -583,7 +583,7 @@
               };
 
               const response = await fetch(
-                "https://lessonsapp-env.eba-icve4xrr.eu-west-2.elasticbeanstalk.com/order",
+                " http://localhost:8080/order",
                 {
                   method: "POST",
                   headers: {
