@@ -97,7 +97,7 @@ h1 {
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: #ff8800;
+  color: #d729d4;
   cursor: pointer;
 }
 
@@ -140,25 +140,6 @@ h1 {
 .card-img-top:hover {
   transform: scale(1.05);
 }
-.carousel-item img {
-  height: 50vh;
-  width: 80%;
-  object-fit: cover;
-}
-
-#carouselExampleIndicators {
-  height: 50vh;
-  margin-top: 4rem;
-}
-/* Ensures the carousel images fully cover the container height */
-#carouselExampleIndicators .carousel-inner {
-  height: 100%;
-}
-#carouselExampleIndicators .carousel-item img {
-  height: 100%;
-  object-fit: cover; /* Ensures the image covers the area without distortion */
-}
-
 /* sorting  items */
 .sort-controls {
   margin-top: 2rem;
@@ -183,10 +164,10 @@ h1 {
   transition: all 0.3s ease-in-out;
 }
 .form-select:hover {
-  border-color: #007bff;
+  border-color: #7bcd17;
 }
 .form-select:focus {
-  border-color: #007bff;
+  border-color: #7bcd17;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
@@ -196,8 +177,8 @@ h1 {
 }
 
 .pagination .page-item.active .page-link {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #9eba20;
+  border-color: #9eba20;
   color: white;
 }
 
