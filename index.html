@@ -26,7 +26,7 @@
         <div class="container-fluid">
           <!-- Logo and Site Name -->
           <div class="navbar-brand d-flex align-items-center" id="fullLogo">
-            <img src="/Vue.js/asset/logo.jpg" alt="ParentPay Logo" class="logo" />
+            <img src="asset\lessonlogo.jpg" alt="Lessonapp Logo" class="logo" />
             <h1 class="text-white fs-3 luckiest-guy-regular mb-0">
               {{ siteName }}
             </h1>
@@ -335,8 +335,8 @@
         class="sort-controls text-center mb-4 d-flex flex-column justify-content-center align-items-center"
       >
         <img
-          src="/asset/logo.jpg"
-          alt="ParentPay Logo"
+          src="asset/logo.jpg"
+          alt="Lessonapp Logo"
           class="logo align-items-center fs-3 logoCenter"
         />
 
@@ -544,9 +544,7 @@
 
             try {
               const response = await fetch(
-                `https://myapp-env.eba-qzx7ttw3.eu-west-2.elasticbeanstalk.com/search?q=${encodeURIComponent(
-                  query
-                )}`
+                `https://myapp-env.eba-qzx7ttw3.eu-west-2.elasticbeanstalk.com/search?q=${encodeURIComponent(query)}`
               );
 
               if (!response.ok) {
