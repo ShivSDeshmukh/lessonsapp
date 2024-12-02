@@ -59,7 +59,7 @@ h1 {
 .no-border:active,
 .no-border:focus {
   background-color: transparent !important;
-  color: #ffffff;
+  color: #1d50bd;
 }
 
 /* search bar */
